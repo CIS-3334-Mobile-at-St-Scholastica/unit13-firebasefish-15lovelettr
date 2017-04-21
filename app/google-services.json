@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "3901364435",
+    "firebase_url": "https://fishlocatorfirebase.firebaseio.com",
+    "project_id": "fishlocatorfirebase",
+    "storage_bucket": "fishlocatorfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3901364435:android:a1695d7ecc99ba5e",
+        "android_client_info": {
+          "package_name": "css.cis3334.fishlocatorfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3901364435-tua4v0v814eqqdl2slbt7d5ue4h4uc54.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "css.cis3334.fishlocatorfirebase",
+            "certificate_hash": "29200dd6dc1e1e69796836b85e48f5ed71dcb379"
+          }
+        },
+        {
+          "client_id": "3901364435-d6pdgacvm4vbaaf5unuos3kvfmlc4mmu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASHAV-NakYROxXJsnOQRDsTQJhJOR9J_o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3901364435-d6pdgacvm4vbaaf5unuos3kvfmlc4mmu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Firebase Fish Tracker</string>
+    <string name="fish_caught">Fish caught so far...</string>
+    <string name="add_fish">Add a fish</string>
+    <string name="fish_details">Fish Details</string>
+</resources>
+
