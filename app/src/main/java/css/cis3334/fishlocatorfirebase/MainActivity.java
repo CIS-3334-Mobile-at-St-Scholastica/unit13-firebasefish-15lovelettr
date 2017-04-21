@@ -1,5 +1,6 @@
 package css.cis3334.fishlocatorfirebase;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,7 +21,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button buttonAdd, buttonDetails, buttonDelete;          // two button widgets
+    Button buttonAdd, buttonDetails, buttonDelete, signOutBttn;          // two button widgets
     ListView listViewFish;                                  // listview to display all the fish in the database
     ArrayAdapter<Fish> fishAdapter;
     List<Fish> fishList;
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setupAddButton();
         setupDetailButton();
         setupDeleteButton();
+        setupLogoutButton();
     }
 
     private void setupFirebaseDataChange() {
@@ -67,6 +70,19 @@ public class MainActivity extends AppCompatActivity {
                                     int position, long id) {
                 positionSelected = position;
                 Log.d("MAIN", "Fish selected at position " + positionSelected);
+            }
+        });
+    }
+
+    private void setupLogoutButton() {
+        // Set up the button to logout to main screen
+        signOutBttn = (Button) findViewById(R.id.buttonSignOut);
+        signOutBttn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent returnIntent = getIntent();
+                returnIntent.putExtra("result", 0);
+                setResult(Activity.RESULT_OK, returnIntent);
+                finish();
             }
         });
     }
