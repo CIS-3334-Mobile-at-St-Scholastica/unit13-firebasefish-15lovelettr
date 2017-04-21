@@ -13,6 +13,7 @@ import java.util.List;
 
 /**
  * Created by cssuser on 4/20/2017.
+ * Edited by Randi Lovelett & Malvern Madondo
  */
 
 
@@ -48,9 +49,11 @@ public class FishAdapter extends ArrayAdapter<Fish> {
         TextView tvSpecies=(TextView)view.findViewById(R.id.textViewSpecies);
         TextView tvWeight=(TextView)view.findViewById(R.id.textViewWeight);
         TextView tvDate=(TextView)view.findViewById(R.id.textViewDate);
+        TextView tvLocation=(TextView)view.findViewById(R.id.textViewLocation);
         tvSpecies.setText(fish.getSpecies());
         tvWeight.setText(fish.getWeightInOz());
         tvDate.setText(fish.getDateCaught());
+        tvLocation.setText(fish.getLocationCaughtLatitude() + " x " + fish.getLocationCaughtLongitude());
 
         return(view);
     }

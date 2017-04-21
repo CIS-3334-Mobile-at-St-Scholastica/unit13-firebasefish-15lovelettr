@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * Created by cssuser on 4/20/2017.
+ * Edited by Randi Lovelett & Malvern Madondo
  */
 
 
@@ -40,8 +41,6 @@ public class Fish implements Serializable {
         this.species = species;
         this.weightInOz = weightInOz;
         this.dateCaught = dateCaught;
-        this.locationCaughtLatitude = locationCaughtLatitude;
-        this.locationCaughtLongitude = locationCaughtLongitude;
     }
 
     public String getKey() {
@@ -98,6 +97,8 @@ public class Fish implements Serializable {
                 "species='" + species + '\'' +
                 ", weightInOz='" + weightInOz + '\'' +
                 ", dateCaught='" + dateCaught + '\'' +
+                ", latitudeCaught='" + locationCaughtLatitude + '\'' +
+                ", longitudeCaught='" + locationCaughtLongitude + '\'' +
                 '}';
     }
 }

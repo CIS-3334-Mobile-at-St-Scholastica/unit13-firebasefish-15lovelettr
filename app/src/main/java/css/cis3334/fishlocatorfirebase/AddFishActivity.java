@@ -14,8 +14,7 @@ import com.google.firebase.database.DatabaseReference;
 public class AddFishActivity extends AppCompatActivity {
 
     Button buttonSave;
-    EditText editTextSpecies, editTextWeight, editTextDate;
-    Double lattitude, longiture;
+    EditText editTextSpecies, editTextWeight, editTextDate, editTextLat, editTextLong;
     FishFirebaseData fishDataSource;
 
     @Override
@@ -27,6 +26,8 @@ public class AddFishActivity extends AppCompatActivity {
         editTextSpecies = (EditText) findViewById(R.id.editTextSpecies);
         editTextWeight = (EditText) findViewById(R.id.editTextWeight);
         editTextDate = (EditText) findViewById(R.id.editTextDate);
+        editTextLat = (EditText) findViewById(R.id.editTextLatitude);
+        editTextLong = (EditText) findViewById(R.id.editTextLongitude);
 
         fishDataSource = new FishFirebaseData();
         fishDataSource.open();
@@ -36,7 +37,7 @@ public class AddFishActivity extends AppCompatActivity {
 //        Criteria criteria = new Criteria();
 //        Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria, false));
 //        lattitude = location.getLatitude();
-//        longiture = location.getLongitude();
+//        longitude = location.getLongitude();
 
         // set up the button listener
         buttonSave = (Button) findViewById(R.id.buttonSave);
@@ -46,8 +47,10 @@ public class AddFishActivity extends AppCompatActivity {
                 String species = editTextSpecies.getText().toString();
                 String weight = editTextWeight.getText().toString();
                 String dateCaught = editTextDate.getText().toString();
-                fishDataSource.createFish(species, weight, dateCaught);
-                //fishDataSource.createFish(species, weight, dateCaught, lattitude.toString(), longiture.toString());
+                String latitude = editTextLat.getText().toString();
+                String longitude = editTextLong.getText().toString();
+                //fishDataSource.createFish(species, weight, dateCaught);
+                fishDataSource.createFish(species, weight, dateCaught, latitude, longitude);
                 Intent mainActIntent = new Intent(view.getContext(), MainActivity.class);
                 finish();
                 startActivity(mainActIntent);

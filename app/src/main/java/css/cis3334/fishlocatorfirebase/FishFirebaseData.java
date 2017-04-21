@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * Created by cssuser on 4/20/2017.
+ * Edited by Randi Lovelett & Malvern Madondo
  */
 
 public class FishFirebaseData {
@@ -28,7 +29,7 @@ public class FishFirebaseData {
 
     }
 
-    public Fish createFish( String species, String weightInOz, String dateCaught) {           //Added String rating as a parameter
+    public Fish createFish( String species, String weightInOz, String dateCaught) { //Added String rating as a parameter
         // ---- Get a new database key for the vote
         String key = myFishDbRef.child(FishDataTag).push().getKey();
         // ---- set up the fish object
